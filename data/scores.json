@@ -1,0 +1,15 @@
+{
+  "records": [
+    { "student": "Alicia ", "id": 1, "teachers": "jim , bob", "scores": [97, 93, [93, 97]] },
+    { "student": "Bobby  ", "id": 2, "teachers": "alice , bob", "scores": [99, 91, [98, 92]] },
+    { "student": "Carlos ", "id": 3, "teachers": "tiff , lexy", "scores": [97, 90, [97, 96]] },
+    { "student": "Diego  ", "id": 4, "teachers": "tim, eric", "scores": [98, 92, [96, 94], [97, 93]] },
+    { "student": "Ernesto", "id": 5, "teachers": "tom , tiff", "scores": [91, 99] },
+    { "student": "Ferny  ", "id": 6, "teachers": "jim, rob", "scores": [95] },
+    { "student": "Grant  ", "id": 7, "teachers": "jim, rob , alice", "scores": [94, 96, [94, 96]] },
+    { "student": "Hilda  ", "id": 8, "teachers": "alice, bob", "scores": [93, 97, [91, 99]] },
+    { "student": "Ivana  ", "id": 9, "teachers": "alice, bob", "scores": [96, 94, [93, 97]] },
+    { "student": "Julian ", "id": 10, "teachers": "alice, bob", "scores": [92, 98, [96, 94]] },
+    { "student": "Kevin  ", "id": 11, "teachers": "alice, bob", "scores": [91, 97, [96, 96]] }
+  ]
+}
