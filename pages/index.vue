@@ -38,7 +38,7 @@ export default {
 function parseRecords(maybeJSON) {
   try {
     return JSON.parse(maybeJSON)
-  } catch(e) {
+  } catch {
     console.log('could not parse:' + maybeJSON)
     throw new Error('unable to parse')
   }
