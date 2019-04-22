@@ -59,7 +59,7 @@ function transformRecord(record) {
   const result = {
     student: record.student.trim(),
     average: avg,
-    teachers: record.teachers.split(',').map(teacher => ' ' + teacher.trim()).join(','),
+    teachers: record.teachers.split(',').map(teacher => teacher.trimEnd()).join(','),
     grade
   }
 
