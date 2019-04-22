@@ -49,27 +49,12 @@ function getGrade(average) {
   return grades.c
 }
 
-function flat(arr, depth) {
-  if (!depth) {
-    return arr.slice()
-  }
-  const flatArr = []
-  arr.forEach(value =>  {
-    if (Array.isArray(value)) {
-      flatArr.push(...flat(value, depth - 1))
-    } else {
-      flatArr.push(value)
-    }
-  })
-  return flatArr
-}
-
 function transformRecord(record) {
   if (recordMap.has(record.id)) {
     return recordMap.get(record.id)
   }
 
-  const avg = average(flat(record.scores, 2))
+  const avg = average(record.scores.flat(2))
   const grade = getGrade(avg)
   const result = {
     student: record.student.trim(),
