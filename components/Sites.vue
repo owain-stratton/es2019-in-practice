@@ -42,11 +42,8 @@ export default {
       return average(counts)
     },
     filteredAverageCount() {
-      const counts = []
-      this.records.forEach(record => {
-        if (this.id === record.id) {
-          counts.push(record.am, record.pm)
-        }
+      const counts = this.records.flatMap(record => {
+        return this.id === record.id ? [record.am, record.pm] : []
       })
       return average(counts)
     }
