@@ -30,23 +30,23 @@
 import { average } from '~/utils/index'
 
 const grades = {
-  a: 'A',
-  b: 'B',
-  c: 'C',
-  d: 'D',
-  f: 'F'
+  a: Symbol('A'),
+  b: Symbol('B'),
+  c: Symbol('C'),
+  d: Symbol('D'),
+  f: Symbol('F')
 }
 
 const recordMap = new Map()
 
 function getGrade(average) {
   if (average >= 95) {
-    return grades.a
+    return grades.a.description
   }
   if (average >= 85) {
-    return grades.b
+    return grades.b.description
   }
-  return grades.c
+  return grades.c.description
 }
 
 function transformRecord(record) {
