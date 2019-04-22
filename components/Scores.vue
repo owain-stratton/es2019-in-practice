@@ -97,16 +97,7 @@ export default {
     },
     sorted() {
       const mapped = this.records.map(record => transformRecord(record))
-      const stableMapped = mapped.map((record, index) => {
-        record.index = index;
-        return record;
-      })
-      return mapped.sort((a, b) => {
-        if (a.average === b.average) {
-          return a.index - b.index;
-        }
-        return a.average - b.average
-      })
+      return mapped.sort((a, b) => a.average - b.average)
     },
     json() {
       const json = {};
