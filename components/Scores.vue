@@ -85,11 +85,10 @@ export default {
       return mapped.sort((a, b) => a.average - b.average)
     },
     json() {
-      const json = {};
-      for(const [key, val] of this.recordsMap.entries()) {
-        json[key] = val;
+      if (!Object.fromEntries) {
+        return 'loading...'
       }
-      return JSON.stringify(json, null, 2)
+      return JSON.stringify(Object.fromEntries(this.recordsMap), null, 2)
     }
   },
   watch: {
