@@ -39,7 +39,7 @@ function parseRecords(maybeJSON) {
   try {
     return JSON.parse(maybeJSON)
   } catch {
-    console.log('could not parse:' + maybeJSON)
+    console.error('could not parse:' + maybeJSON)
     throw new Error('unable to parse')
   }
 }
